@@ -1,0 +1,27 @@
+---
+layout: default 
+---
+
+{{ content }}
+
+
+<h2> Cinematografia Matrix </h2>
+<p>El orden en el que fueron estrenándose fue:</p>
+<ol>
+    <li>Matrix</li>
+    <li>'Matrix Reloaded'</li>
+    <li>'Animatrix' (antología de nueve cortometrajes)</li>
+    <li>'Matrix Revolutions'</li>
+    <li>'Matrix Resurrections'</li>
+</ol>
+
+<p>Además, así empiezas por todo lo alto con la primera entrega que fue en su momento todo un hito dentro del séptimo arte.</p>
+{% if site.posts.size > 0 %}
+<ul>
+{% for post in site.posts %}
+<li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
